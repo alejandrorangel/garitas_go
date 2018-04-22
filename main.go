@@ -67,7 +67,7 @@ func parseContent(content []byte) ([]Port, error) {
 func main() {
 	jsonContent, err := getContent("https://bwt.cbp.gov/api/bwtnew")
 	if err != nil {
-		fmt.Printf("Failed to get XML: %v", err)
+		fmt.Printf("Failed to get JSON: %v", err)
 	} else {
 		garitas, err := parseContent(jsonContent)
 		if err != nil {
